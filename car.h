@@ -11,6 +11,7 @@ private:
 public:
 	Car();
 	Car(string, int, string);
+	Car(const Car& other);
 	~Car();
 	void Setcolor(string newcolor);
 	void Setcarage(int newcarage);
@@ -18,6 +19,11 @@ public:
 	static int GetCount();
 	void CarDispley();
 	friend istream& operator>>(istream& is, Car& car);
+	friend ostream& operator<<(ostream& os, Car& car);    
 };
+ 
+
+
+
 
 

@@ -6,7 +6,7 @@ Car::Car() {
 	count++;
 }
 Car::Car(string newcolor = "unknow", int newcarage = 0, string newmark = "none")
-:color{newcolor},carage{newcarage}, mark{newmark}{
+	:color{ newcolor }, carage{ newcarage }, mark{ newmark } {
 	count++;
 }
 // Конструктор копіювання
@@ -21,13 +21,8 @@ int Car::GetCount() {
 	return count;
 }
 
-//TODO
-//написати конструктор копій і додати туди збільшення лічильника
-//прописта ґеткаунт, який повертатиме ількість створених машин
-//перевантажити << >> для всіх класів
-//this для всіх класів
-Car::~Car(){}
-void Car:: Setcolor(string newcolor) {
+Car::~Car() {}
+void Car::Setcolor(string newcolor) {
 	color = newcolor;
 }
 void Car::Setcarage(int newcarage) {
@@ -52,6 +47,11 @@ istream& operator>>(istream& is, Car& car) {
 
 	cout << "Enter Car color: ";
 	is >> car.color;
-
 	return is;
+
+}
+ostream& operator<<(ostream& os, Car& car) {
+	os << "Car age:" << car.carage << endl;
+	os << "Car mark" << car.mark << endl;
+	os << "Car color:" << car.color << endl;
 }

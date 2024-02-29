@@ -17,4 +17,5 @@ public:
 	void Setage(int nowage);
 	void Setadress(string nowadress);
 	void Displey();
+    friend ostream& operator<<(ostream& os, Client& car);
 };

@@ -29,4 +29,8 @@ void Client::Displey() {
 	cout << "Client adress:" << adress << endl;
 
 }
-
+ostream& operator<<(ostream& os, Client & car) {
+	os << "Client name:" << car.name << endl;
+	os << "Client age" << car.age << endl;
+	os << "Client adress:" << car.adress << endl;
+}
