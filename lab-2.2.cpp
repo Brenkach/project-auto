@@ -11,4 +11,5 @@ int main()
 	Seler Seler1;
 	Car Car1{ "yelow", 2020,"volvo" };
 	Car1.CarDispley();
+	cout << "test";
 }
