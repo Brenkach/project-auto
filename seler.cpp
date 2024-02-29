@@ -12,14 +12,14 @@ Seler::Seler(int newselerage, string newselername, string newseleradress)
 
 Seler::~Seler() {}
 
-void Seler::selerSetname(string nowselername) {
-	selername = nowselername;
+void Seler::selerSetname(string selername) {
+	this->selername = selername;
 }
-void Seler::selerSetage(int nowselerage) {
-	selerage = nowselerage;
+void Seler::selerSetage(int selerage) {
+	this->selerage = selerage;
 }
-void Seler::selerSetadress(string nowseleradress) {
-	seleradress = nowseleradress;
+void Seler::selerSetadress(string seleradress) {
+	this->seleradress = seleradress;
 }
 void Seler::selerDispley() {
 	cout << "Seler name:" << selername << endl;

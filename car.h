@@ -7,6 +7,7 @@ private:
 	string color;
 	int carage;
 	string mark;
+	static int count;
 public:
 	Car();
 	Car(string, int, string);
@@ -14,7 +15,9 @@ public:
 	void Setcolor(string newcolor);
 	void Setcarage(int newcarage);
 	void Setmark(string newmark);
+	static int GetCount();
 	void CarDispley();
+	friend istream& operator>>(istream& is, Car& car);
 };
 
 
