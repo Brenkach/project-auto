@@ -23,13 +23,13 @@ int Car::GetCount() {
 
 Car::~Car() {}
 void Car::Setcolor(string newcolor) {
-	color = newcolor;
+	this->color = newcolor;
 }
 void Car::Setcarage(int newcarage) {
-	carage = newcarage;
+	this->carage = newcarage;
 }
 void Car::Setmark(string newmark) {
-	mark = newmark;
+	this->mark = newmark;
 }
 void Car::CarDispley() {
 	cout << "Car age:" << carage << endl;
@@ -54,4 +54,5 @@ ostream& operator<<(ostream& os, Car& car) {
 	os << "Car age:" << car.carage << endl;
 	os << "Car mark" << car.mark << endl;
 	os << "Car color:" << car.color << endl;
+	return os;
 }

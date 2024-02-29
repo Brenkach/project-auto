@@ -15,13 +15,13 @@ Client::Client(int newage, string newname, string newadress)
 Client::~Client(){}
 
 void Client::Setname(string nowname) {
-	name = nowname;
+	this->name = nowname;
 }
 void Client::Setage(int nowage) {
-	age = nowage;
+	this->age = nowage;
 }
 void Client::Setadress(string nowadress) {
-	adress = nowadress;
+	this->adress = nowadress;
 }
 void Client::Displey() {
 	cout << "Client name:" << name << endl;
@@ -29,8 +29,20 @@ void Client::Displey() {
 	cout << "Client adress:" << adress << endl;
 
 }
-ostream& operator<<(ostream& os, Client & car) {
-	os << "Client name:" << car.name << endl;
-	os << "Client age" << car.age << endl;
-	os << "Client adress:" << car.adress << endl;
+istream& operator>>(istream& is, Client& client) {
+	cout << "Enter Client name: ";
+	is >> client.name;
+
+	cout << "Enter Client age: ";
+	is >> client.age;
+
+	cout << "Enter Client adress: ";
+	is >> client.adress;
+	return is;
+}
+ostream& operator<<(ostream& os, Client & client) {
+	os << "Client name:" << client.name << endl;
+	os << "Client age" << client.age << endl;
+	os << "Client adress:" << client.adress << endl;
+	return os;
 }

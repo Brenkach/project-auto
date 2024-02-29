@@ -12,5 +12,7 @@ int main()
 	//cout << Car::count << endl;
 	Car Car1{ "red", 2020,"volvo" };
 	//cout << Car::count << endl;
-	Car1.CarDispley();
+	cout << Car1;
+	Car car2 = Car(Car1);
+	cout << car2;
 }
