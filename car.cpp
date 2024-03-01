@@ -52,7 +52,7 @@ istream& operator>>(istream& is, Car& car) {
 }
 ostream& operator<<(ostream& os, Car& car) {
 	os << "Car age:" << car.carage << endl;
-	os << "Car mark" << car.mark << endl;
+	os << "Car mark: " << car.mark << endl;
 	os << "Car color:" << car.color << endl;
 	return os;
 }
