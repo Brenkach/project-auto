@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "people.h"
 using namespace std;
  class Seler
 {
