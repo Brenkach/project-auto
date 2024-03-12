@@ -13,13 +13,28 @@ People::People(string newaname, string newsurname, int age)
 People::People(string newaname, string newsurname, int age, int number_phone)
 	: name{ newaname }, surname{ newsurname }, age{ age }, number_phone{ number_phone } {}
 
-People::People(const People& people) {
-	name = people.name;
-	surname = people.surname;
-	age = people.age;
-	number_phone = people.number_phone;
-}
-
+People::People(const People& other) {
+	name = other.name;
+	surname = other.surname;
+	age = other.age;
+	number_phone = other.number_phone;
+}//copy constructor
+People& People::operator=(const People& other) {
+	if (this != &other) {
+		name = other.name;
+		age = other.age;
+		surname = other.surname;
+		number_phone = other.number_phone;
+	}
+	return *this;
+}//operator =
+People::People(People&& other)noexcept
+:name(move(other.name)),age(move(other.age)),surname(move(other.surname)), number_phone(move(other.number_phone)){
+	other.name = nullptr;
+	other.surname = nullptr;
+	other.age = NULL;
+	other.number_phone = NULL;
+} //Move constructor
 
 People::~People() {}
 

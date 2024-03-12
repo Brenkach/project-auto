@@ -14,7 +14,7 @@ Details::Details()
         : name{ name }, age{ 0 } {}
  Details::~Details(){}
 
- bool Details::isNewDetails() {
+ bool Details::isNewDetails()const {
 	 if (age > 10)
 	 {
 		 return true;

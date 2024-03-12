@@ -9,7 +9,7 @@ int main()
 {
 	Client Client1;
 
-	Client Client2(18, "Loh", "Pidr","Prospect", 77501016);
+	Client Client2(18, "Denus", "Brenkach","Prospect", 38077501016);
 	//Seler Seler1;
 	Car Car1{ "red", 2020,"volvo" };
 	Car Car3{ "black", 2012, "Audi" };

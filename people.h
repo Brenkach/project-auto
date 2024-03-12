@@ -16,8 +16,9 @@ public:
 	People(string newname, string newsurname);
 	People(string newname, string newsurname, int newage);
 	People(string newname, string newsurname, int newage, int newnumer_phone);
-	People(const People& people);
-	People(People& people);
+	People(const People& other);//copy
+	People(People&& other) noexcept;//move
+	People& operator = (const People& other);//operator =
 	~People();
 	void Setname(string name);
 	void Setsurname(string surname);

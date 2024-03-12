@@ -14,7 +14,7 @@ public:
 	Details(string name, int age);
 	~Details();
 
-	bool isNewDetails();
+	bool isNewDetails()const;
 
 
 };

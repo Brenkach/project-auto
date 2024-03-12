@@ -16,6 +16,21 @@ Client::Client(int newage, string newname, string surname, string newadress)
 
 Client::Client(int newage, string newname, string surname, string newadress, int number_phone)
 	: People{ newname, surname, newage, number_phone }, adress{ newadress } {}
+
+Client::Client(const Client& other)
+:People("None","Unknown",0,0),adress(other.adress) {}
+
+Client::Client(Client&& other) noexcept
+	:People(move(other)), adress(other.adress) {
+	other.adress = nullptr;
+}
+Client& Client::operator = (const Client& other) {
+	if (this != &other) {
+		People::operator=(other);
+		adress = other.adress;
+	}
+	return *this ;
+}
 Client::~Client() {}
 
 
