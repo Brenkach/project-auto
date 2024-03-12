@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "people.h"
 #include "Seler.h"
 using namespace std;
 Seler::Seler()

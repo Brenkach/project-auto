@@ -16,6 +16,8 @@ public:
 	People(string newname, string newsurname);
 	People(string newname, string newsurname, int newage);
 	People(string newname, string newsurname, int newage, int newnumer_phone);
+	People(const People& people);
+	People(People& people);
 	~People();
 	void Setname(string name);
 	void Setsurname(string surname);

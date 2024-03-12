@@ -13,13 +13,14 @@ Client::Client(int newage, string newname, string newsurname)
 	: People{ newname, newsurname,newage } {}
 Client::Client(int newage, string newname, string surname, string newadress)
 	: People{ newname, surname, age }, adress{ newadress } {}
-Client::~Client() {}
 
 Client::Client(int newage, string newname, string surname, string newadress, int number_phone)
 	: People{ newname, surname, newage, number_phone }, adress{ newadress } {}
+Client::~Client() {}
 
 
-void Client::Setname(string nowname) {
+
+/*void Client::Setname(string nowname) {
 	this->name = nowname;
 }
 void Client::Setage(int nowage) {
@@ -31,7 +32,7 @@ void Client::Setadress(string nowadress) {
 void Client::Setnumber_phone(int nownumber_phone) {
 	this->number_phone = nownumber_phone;
 }
-
+*/
 void  Client::Displey() {
 	People::Displey();
 	cout << "Adress: " << adress << endl;

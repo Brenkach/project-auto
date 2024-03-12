@@ -13,6 +13,13 @@ People::People(string newaname, string newsurname, int age)
 People::People(string newaname, string newsurname, int age, int number_phone)
 	: name{ newaname }, surname{ newsurname }, age{ age }, number_phone{ number_phone } {}
 
+People::People(const People& people) {
+	name = people.name;
+	surname = people.surname;
+	age = people.age;
+	number_phone = people.number_phone;
+}
+
 
 People::~People() {}
 
@@ -28,6 +35,7 @@ void People::Setsurname(string newsurname) {
 void People::Setnumber_phone(int number_phone) {
 	this->number_phone = number_phone;
 }
+
 void People::Displey() {
 	cout << "People name:" << name << endl;
 	cout << "People surname:" << surname << endl;

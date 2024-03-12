@@ -37,6 +37,14 @@ void Car::CarDispley() {
 	cout << "Car color:" << color << endl;
 }
 int Car::count = 0;
+void Car::showNewDetails() {
+	if (Details::isNewDetails) {
+		cout << "You have a new details." << endl;
+	}
+	else {
+		cout << "You have a old details." << endl;
+	}
+}
 
 istream& operator>>(istream& is, Car& car) {
 	cout << "Enter Car age: ";
