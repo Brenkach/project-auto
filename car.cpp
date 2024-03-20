@@ -3,18 +3,18 @@
 #include "car.h"
 using namespace std;
 Car::Car() {
-	count++;
+	
 }
-Car::Car(string newcolor = "unknow", int newcarage = 0, string newmark = "none")
+Car::Car(string newcolor, int newcarage , string newmark)
 	:color{ newcolor }, carage{ newcarage }, mark{ newmark } {
-	count++;
+	
 }
 // Конструктор копіювання
 Car::Car(const Car& other) {
 	color = other.color;
 	carage = other.carage;
 	mark = other.mark;
-	count++; // Збільшуємо лічильник при копіюванні
+
 }
 
 int Car::GetCount() {

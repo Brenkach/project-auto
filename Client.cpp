@@ -52,6 +52,9 @@ void  Client::Displey()const {
 	People::Displey();
 	cout << "Adress: " << adress << endl;
 }
+void Client::sound() {
+	cout << "I am :" << name << " Ready to buy your car" << endl;
+}
 istream& operator>>(istream& is, Client& client) {
 	cout << "Enter Client name: ";
 	is >> client.name;

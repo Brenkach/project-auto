@@ -1,11 +1,10 @@
 #pragma once
 #include <iostream>
-
 #include "carDetails.h"
 
 
 using namespace std;
- class Car
+ class Car 
 {
 private:
 	string color;
@@ -17,7 +16,7 @@ private:
 public:
 	
 	Car();
-	Car(string, int, string);
+	Car(string newcolor, int newcarage, string newmark);
 	Car(const Car& other);
 	~Car();
 	void Setcolor(string newcolor);

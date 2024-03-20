@@ -25,5 +25,6 @@ public:
 	void Setage(int age);
 	void Setnumber_phone(int number_phone);
 	virtual void Displey()const;
+	virtual void sound() = 0;
 };
 

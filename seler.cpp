@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include "people.h"
-#include "Seler.h"
+#include "seler.h"
 using namespace std;
 Seler::Seler()
 	:Seler{ 0, "None", "unknow" } {}
