@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
+#include "Interface.h"
 using namespace std;
-class People
+class People : public Interface
 {
 protected:
 	string name;
@@ -26,5 +27,6 @@ public:
 	void Setnumber_phone(int number_phone);
 	virtual void Displey()const;
 	virtual void sound() = 0;
+	virtual void print(ostream& os)const override;
 };
 

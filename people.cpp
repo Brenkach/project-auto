@@ -50,7 +50,12 @@ void People::Setsurname(string newsurname) {
 void People::Setnumber_phone(int number_phone) {
 	this->number_phone = number_phone;
 }
-
+void People::print(ostream& os) const {
+	os << "Interface for People: " << endl;
+	os << "My name: " << name << endl << "Surname: " << surname << endl
+		<< "Age: " << age << endl << "Number phone: " << number_phone << endl;
+	os << endl;
+}
 
 void People::Displey()const {
 	cout << "People name:" << name << endl;

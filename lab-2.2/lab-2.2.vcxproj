@@ -130,13 +130,17 @@
     <ClCompile Include="..\car.cpp" />
     <ClCompile Include="..\carDetails.cpp" />
     <ClCompile Include="..\Client.cpp" />
+    <ClCompile Include="..\Interface.cpp" />
     <ClCompile Include="..\lab-2.2.cpp" />
+    <ClCompile Include="..\people.cpp" />
     <ClCompile Include="..\seler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\car.h" />
     <ClInclude Include="..\carDetails.h" />
     <ClInclude Include="..\Client.h" />
+    <ClInclude Include="..\Interface.h" />
+    <ClInclude Include="..\people.h" />
     <ClInclude Include="..\seler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

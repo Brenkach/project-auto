@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include "Client.h"
-#include "people.cpp"
 using namespace std;
 Client::Client()
 	:People{ "None", "unknow",0 } {}
@@ -54,6 +53,13 @@ void  Client::Displey()const {
 }
 void Client::sound() {
 	cout << "I am :" << name << " Ready to buy your car" << endl;
+}
+void Client::print(ostream& os) const {
+	os << "Interface for Client: " << endl;
+	os << "My name: " << name << endl << "Surname: " << surname <<endl
+		<< "Age: " << age << endl << "Number phone: " << number_phone << endl << "Adress: " << adress << endl;
+	os << endl;
+
 }
 istream& operator>>(istream& is, Client& client) {
 	cout << "Enter Client name: ";

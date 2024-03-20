@@ -21,5 +21,6 @@ public:
 	void sound()override;
 	friend istream& operator>>(istream& os, Client& car);
 	friend ostream& operator<<(ostream& os, Client& car);
+	virtual void print(ostream& os) const override;
 
 };

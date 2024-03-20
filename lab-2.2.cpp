@@ -11,6 +11,9 @@ void displeyInfoOnUI(const People& people) {
 	people.Displey();
 	cout << "---------------------------------------------" << endl;
 }
+void InterfaceForAll(Interface & obj) {
+	cout << obj;                 // Interface
+}
 int main()
 {
 	/*Client Client1;
@@ -24,21 +27,23 @@ int main()
 	Car car2 = Car(Car1);
 	cout << car2 << endl;
 	 Client1.Displey();
-	 cout << "" << endl;
-	*/
+	 cout << "" << endl;*/
+	
 Client Client2(18, "Denus", "Brenkach","Prospect", 38077501016);
  Client2.Displey();
-// People People1("Maksym", "Grushko");
-// People1.Displey();//static 
- //People* client1 = new Client();//base class pointer
-// client1->Setname("John");
-//displeyInfoOnUI(*client1);
-//delete client1;
-Client Client3;
+ //People People1("Maksym", "Grushko");
+ //People1.Displey();//static 
+ People* client1 = new Client();//base class pointer
+ client1->Setname("John");
+displeyInfoOnUI(*client1);
+delete client1;
+Client Client3;//referens
 Client3.Setname("name");
 People& People2 = Client3;
 People2.sound();
+InterfaceForAll(People2);//interface
 //Base class referens
 //displeyInfoOnUI(People2);
+
 }
 

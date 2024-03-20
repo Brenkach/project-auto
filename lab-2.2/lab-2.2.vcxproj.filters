@@ -30,6 +30,12 @@
     <ClCompile Include="..\carDetails.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\people.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\car.h">
@@ -42,6 +48,12 @@
       <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="..\carDetails.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\people.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interface.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
