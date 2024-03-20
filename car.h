@@ -15,6 +15,7 @@ private:
 	Details motor;
 
 public:
+	
 	Car();
 	Car(string, int, string);
 	Car(const Car& other);

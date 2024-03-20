@@ -31,10 +31,14 @@ int main()
 Client Client2(18, "Denus", "Brenkach","Prospect", 38077501016);
  Client2.Displey();
  People People1("Maksym", "Grushko");
- People1.Displey();
- People* client1 = new Client();
+ People1.Displey();//static 
+ People* client1 = new Client();//base class pointer
  client1->Setname("John");
 displeyInfoOnUI(*client1);
 delete client1;
+Client Client3;
+Client3.Setname("name");
+People& People2 = Client3;//Base class referens
+displeyInfoOnUI(People2);
 }
 

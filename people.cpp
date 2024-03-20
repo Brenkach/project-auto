@@ -51,6 +51,7 @@ void People::Setnumber_phone(int number_phone) {
 	this->number_phone = number_phone;
 }
 
+
 void People::Displey()const {
 	cout << "People name:" << name << endl;
 	cout << "People surname:" << surname << endl;
