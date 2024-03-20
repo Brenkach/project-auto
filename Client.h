@@ -17,7 +17,7 @@ public:
 	Client(Client&& other) noexcept;
 	Client& operator=(const Client& other);
 	~Client();
-	void Displey();
+	void Displey() const override;
 	friend istream& operator>>(istream& os, Client& car);
 	friend ostream& operator<<(ostream& os, Client& car);
 

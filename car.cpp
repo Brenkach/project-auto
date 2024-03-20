@@ -37,7 +37,7 @@ void Car::CarDispley() {
 	cout << "Car color:" << color << endl;
 }
 int Car::count = 0;
-void Car::showNewDetails() {s
+void Car::showNewDetails() {
 	if (&Details :: isNewDetails ) {
 		cout << "You have a new details." << endl;
 	}

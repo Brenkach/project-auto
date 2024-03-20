@@ -19,11 +19,11 @@ public:
 	People(const People& other);//copy
 	People(People&& other) noexcept;//move
 	People& operator = (const People& other);//operator =
-	~People();
+	virtual ~People();
 	void Setname(string name);
 	void Setsurname(string surname);
 	void Setage(int age);
 	void Setnumber_phone(int number_phone);
-	void Displey();
+	virtual void Displey()const;
 };
 

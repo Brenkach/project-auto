@@ -18,7 +18,7 @@ Client::Client(int newage, string newname, string surname, string newadress, int
 	: People{ newname, surname, newage, number_phone }, adress{ newadress } {}
 
 Client::Client(const Client& other)
-:People("None","Unknown",0,0),adress(other.adress) {}
+:People("None","Unknown",0,0),adress(other.adress) {}//поміняти значееня на other
 
 Client::Client(Client&& other) noexcept
 	:People(move(other)), adress(other.adress) {
@@ -48,7 +48,7 @@ void Client::Setnumber_phone(int nownumber_phone) {
 	this->number_phone = nownumber_phone;
 }
 */
-void  Client::Displey() {
+void  Client::Displey()const {
 	People::Displey();
 	cout << "Adress: " << adress << endl;
 }
@@ -71,6 +71,7 @@ ostream& operator<<(ostream& os, Client& client) {
 	os << "Client age" << client.age << endl;
 	os << "Client adress:" << client.adress << endl;
 	os << "Client number:" << client.number_phone << endl;
+
 
 	return os;
 }

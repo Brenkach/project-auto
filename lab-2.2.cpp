@@ -5,11 +5,17 @@
 #include "seler.h"
 using namespace std;
 
+
+void displeyInfoOnUI(const People& people) {
+	cout << "---------------------------------------------" <<endl;
+	people.Displey();
+	cout << "---------------------------------------------" << endl;
+}
 int main()
 {
-	Client Client1;
+	/*Client Client1;
 
-	Client Client2(18, "Denus", "Brenkach","Prospect", 38077501016);
+	
 	//Seler Seler1;
 	Car Car1{ "red", 2020,"volvo" };
 	Car Car3{ "black", 2012, "Audi" };
@@ -20,5 +26,15 @@ int main()
 	Car car2 = Car(Car1);
 	cout << car2 << endl;
 	 Client1.Displey();
-	 Client2.Displey();
+	 cout << "" << endl;
+	*/
+Client Client2(18, "Denus", "Brenkach","Prospect", 38077501016);
+ Client2.Displey();
+ People People1("Maksym", "Grushko");
+ People1.Displey();
+ People* client1 = new Client();
+ client1->Setname("John");
+displeyInfoOnUI(*client1);
+delete client1;
 }
+
