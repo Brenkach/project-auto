@@ -2,7 +2,7 @@
 #include "people.h"
 #include <iostream>
 using namespace std;
-class Client : public People
+class Client final : public People
 {
 private:
 	string adress;
@@ -17,7 +17,7 @@ public:
 	Client(Client&& other) noexcept;
 	Client& operator=(const Client& other);
 	~Client();
-	void Displey() const override;
+	void Displey() const override final;
 	friend istream& operator>>(istream& os, Client& car);
 	friend ostream& operator<<(ostream& os, Client& car);
 
