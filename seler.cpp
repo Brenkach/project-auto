@@ -57,3 +57,14 @@ void Seler::sound()
 {
 	cout << "seler";
 }
+istream& operator>>(istream& is, Seler& Seler) {
+	cout << "Enter Seler name: ";
+	is >> Seler.selername;
+
+	cout << "Enter Seler age: ";
+	is >> Seler.selerage;
+	is.get();
+	cout << "Enter Seler adress: ";
+	is >> Seler.seleradress;
+	return is;
+}

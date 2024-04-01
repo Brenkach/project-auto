@@ -21,5 +21,6 @@ public:
 	void selerSetadress(string nowadress);
 	void selerDispley();
 	virtual void sound() override;
+	friend istream& operator>>(istream& os, Seler& car);
 };
 

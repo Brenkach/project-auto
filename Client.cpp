@@ -72,7 +72,7 @@ istream& operator>>(istream& is, Client& client) {
 	is >> client.adress;
 
 	cout << "Enter Client number: ";
-	is >> client.adress;
+	is >> client.number_phone;
 	return is;
 }
 ostream& operator<<(ostream& os, Client& client) {
