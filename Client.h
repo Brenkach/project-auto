@@ -6,6 +6,8 @@ class Client final : public People
 {
 private:
 	string adress;
+	static string fileName;
+
 public:
 	Client();
 	Client(int newage);
@@ -17,6 +19,7 @@ public:
 	Client(Client&& other) noexcept;
 	Client& operator=(const Client& other);
 	~Client();
+	void AddClient();
 	void Displey() const override final;
 	void sound()override;
 	friend istream& operator>>(istream& os, Client& car);

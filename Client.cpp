@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Client.h"
+#include <fstream>
 using namespace std;
 Client::Client()
 	:People{ "None", "unknow",0 } {}
@@ -17,8 +18,7 @@ Client::Client(int newage, string newname, string surname, string newadress, int
 	: People{ newname, surname, newage, number_phone }, adress{ newadress } {}
 
 Client::Client(const Client& other)
-:People("None","Unknown",0,0),adress(other.adress) {}//поміняти значееня на other
-
+:People("Unknow","Unknown",0,0),adress(other.adress) {}
 Client::Client(Client&& other) noexcept
 	:People(move(other)), adress(other.adress) {
 	other.adress = nullptr;
@@ -84,3 +84,28 @@ ostream& operator<<(ostream& os, Client& client) {
 
 	return os;
 }
+string Client::fileName = "client.txt";
+void Client::AddClient() {
+	// Відкриття файлу для запису у режимі додавання
+	ofstream outFile(fileName, ios::app);
+
+	// Перевірка, чи вдалося відкрити файл
+	if (!outFile.is_open()) {
+		cerr << "Unable to open file: " << fileName << endl;
+		return;
+	}
+
+	// Запис полів об'єкта у файл у окремі рядки
+	outFile << "name: " << name << endl;
+	outFile << "surname: " << surname << endl;
+	outFile << "age: " << age << endl;
+	outFile << "number_phone: " << number_phone << endl;
+	outFile << "adress: " << adress << endl;
+
+
+	// Закриття файлу
+	outFile.close();
+
+	cout << "Data Client has been successfully added to the file." << endl;
+}
+

@@ -12,6 +12,7 @@ private:
 	string mark;
 	static int count;
 	Details motor;
+	static string fileName;
 
 public:
 	
@@ -25,7 +26,8 @@ public:
 	void showNewDetails();
 	static int GetCount();
 	void CarDispley();
-
+	void AddCar();
+	void AllCars();
 	friend istream& operator>>(istream& is, Car& car);
 	friend ostream& operator<<(ostream& os, Car& car);    
 };
