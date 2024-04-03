@@ -1,10 +1,13 @@
 #pragma once
+#pragma warning(disable:4996)
 #include <iostream>
 #include "car.h"
 #include "seler.h"
 #include "Client.h"
 #include <string>
 #include <fstream>
+#include <chrono>
+#include <ctime>    
 using namespace std;
 
 void DisplayObject(string fileName) {
@@ -61,6 +64,11 @@ void AppendSeler()
 }
 int Admin()
 {
+	chrono::system_clock::time_point entertime = chrono::system_clock::now();
+	time_t et = chrono::system_clock::to_time_t(entertime);
+	ofstream save("history.txt", ios::app);
+	save << "admin entered at " << ctime(&et) << '\n';
+	save.close();
 	string choice;
 	while (true) {
 		cout << "Menu:" << endl;
@@ -110,6 +118,11 @@ int Admin()
 }
 int User()
 {
+	std::chrono::system_clock::time_point entertime = std::chrono::system_clock::now();
+	time_t et = std::chrono::system_clock::to_time_t(entertime);
+	ofstream save("history.txt", ios::app);
+	save << "user entered at " << ctime(&et)<<'\n';
+	save.close();
 	string choice;
 	while (true) {
 		cout << "Menu:" << endl;
