@@ -59,7 +59,7 @@ void AppendSeler()
 	cout << Seler1 << endl;
 	Seler1.AddSeler();
 }
-int main()
+int Admin()
 {
 	int choice;
 	while (true) {
@@ -102,6 +102,68 @@ int main()
 			break;
 		}
 	}
+}
+int User()
+{
+	int choice;
+	while (true) {
+		cout << "Menu:" << endl;
+		cout << "1. Display All Cars" << endl;
+		cout << "2. Display All Client" << endl;
+		cout << "3. Display All Seler" << endl;
+		cout << "4. Exit" << endl;
+		cout << "Enter your choice: ";
+		cin >> choice;
+
+		switch (choice) {
+		case 1:
+			DisplayObject("cars.txt");
+
+			break;
+		case 2:
+			DisplayObject("client.txt");
+			break;
+		case 3:
+			DisplayObject("seler.txt");
+			break;
+		case 4:
+			cout << "Exiting..." << endl;
+			return 0;
+		default:
+			cout << "Invalid choice. Please try again." << endl;
+			break;
+		}
+	}
+}
+string password = "1234";
+int main()
+{
+	int choice;
+	while (true) {
+		cout << "Menu:" << endl;
+		cout << "1. Enter as admin" << endl;
+		cout << "2. Enter as user" << endl;
+		cin >> choice;
+		switch (choice)
+		{
+		case 1:
+		{
+			cout << "Enter password" << endl;
+			string testtry;
+			cin >> testtry;
+			if (testtry == password)
+			{
+				Admin(); break;
+			}
+			else
+				cout << "Wrong password, Entered as user" << endl;
+		}
+		default:
+			User();
+			break;
+		}
+	}
+
 	//	//Seler Seler1;
 	//	Car Car3{ "black", 2012, "Audi" };
 	//	Seler Seler1{ 18,"Denis","Prospect" };
