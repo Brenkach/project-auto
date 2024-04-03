@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Client.h"
 #include <fstream>
+#include <string>
 using namespace std;
 Client::Client()
 	:People{ "None", "unknow",0 } {}
@@ -47,7 +48,7 @@ void Client::Setnumber_phone(int nownumber_phone) {
 	this->number_phone = nownumber_phone;
 }
 */
-void  Client::Displey()const {
+void  Client::Displey() {
 	People::Displey();
 	cout << "Adress: " << adress << endl;
 }
@@ -108,4 +109,6 @@ void Client::AddClient() {
 
 	cout << "Data Client has been successfully added to the file." << endl;
 }
+
+
 

@@ -20,7 +20,7 @@ public:
 	Client& operator=(const Client& other);
 	~Client();
 	void AddClient();
-	void Displey() const override final;
+	void Displey();
 	void sound()override;
 	friend istream& operator>>(istream& os, Client& car);
 	friend ostream& operator<<(ostream& os, Client& car);
