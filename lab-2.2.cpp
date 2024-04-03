@@ -61,7 +61,7 @@ void AppendSeler()
 }
 int Admin()
 {
-	int choice;
+	string choice;
 	while (true) {
 		cout << "Menu:" << endl;
 		cout << "1. Add Car" << endl;
@@ -73,39 +73,44 @@ int Admin()
 		cout << "7. Exit" << endl;
 		cout << "Enter your choice: ";
 		cin >> choice;
+		try {
+			switch (stoi(choice)) {
+			case 1:
+				AppendCar();
+				break;
+			case 2:
+				DisplayObject("cars.txt");
 
-		switch (choice) {
-		case 1:
-			AppendCar();
-			break;
-		case 2:
-			DisplayObject("cars.txt");
-
-			break;
-		case 3:
-			AppendClient();
-			break;
-		case 4:
-			DisplayObject("client.txt");
-			break;
-		case 5:
-			AppendSeler();
-			break;
-		case 6:
-			DisplayObject("seler.txt");
-			break;
-		case 7:
-			cout << "Exiting..." << endl;
-			return 0;
-		default:
-			cout << "Invalid choice. Please try again." << endl;
-			break;
+				break;
+			case 3:
+				AppendClient();
+				break;
+			case 4:
+				DisplayObject("client.txt");
+				break;
+			case 5:
+				AppendSeler();
+				break;
+			case 6:
+				DisplayObject("seler.txt");
+				break;
+			case 7:
+				cout << "Exiting..." << endl;
+				return 0;
+			default:
+				cout << "Invalid choice. Please try again." << endl;
+				break;
+			}
+		}
+		catch (...)
+		{
+			cout << "Wrong input" << endl;
 		}
 	}
 }
 int User()
 {
-	int choice;
+	string choice;
 	while (true) {
 		cout << "Menu:" << endl;
 		cout << "1. Display All Cars" << endl;
@@ -114,53 +119,65 @@ int User()
 		cout << "4. Exit" << endl;
 		cout << "Enter your choice: ";
 		cin >> choice;
+		try {
+			switch (stoi(choice)) {
+			case 1:
+				DisplayObject("cars.txt");
 
-		switch (choice) {
-		case 1:
-			DisplayObject("cars.txt");
-
-			break;
-		case 2:
-			DisplayObject("client.txt");
-			break;
-		case 3:
-			DisplayObject("seler.txt");
-			break;
-		case 4:
-			cout << "Exiting..." << endl;
-			return 0;
-		default:
-			cout << "Invalid choice. Please try again." << endl;
-			break;
+				break;
+			case 2:
+				DisplayObject("client.txt");
+				break;
+			case 3:
+				DisplayObject("seler.txt");
+				break;
+			case 4:
+				cout << "Exiting..." << endl;
+				return 0;
+			default:
+				cout << "Invalid choice. Please try again." << endl;
+				break;
+			}
+		}
+		catch (...)
+		{
+			cout << "Wrong input" << endl;
 		}
 	}
 }
 string password = "1234";
 int main()
 {
-	int choice;
+	string choice;
 	while (true) {
 		cout << "Menu:" << endl;
 		cout << "1. Enter as admin" << endl;
 		cout << "2. Enter as user" << endl;
 		cin >> choice;
-		switch (choice)
+		try
 		{
-		case 1:
-		{
-			cout << "Enter password" << endl;
-			string testtry;
-			cin >> testtry;
-			if (testtry == password)
+			switch (stoi(choice))
 			{
-				Admin(); break;
+			case 1:
+			{
+				cout << "Enter password" << endl;
+				string testtry;
+				cin >> testtry;
+				if (testtry == password)
+				{
+					Admin(); break;
+				}
+				else
+					cout << "Wrong password, Entered as user" << endl;
 			}
-			else
-				cout << "Wrong password, Entered as user" << endl;
+			default:
+				User();
+				break;
+			}
 		}
-		default:
-			User();
-			break;
+		catch (...)
+		{
+			cout << "Wrong input" << endl;
 		}
 	}
 
